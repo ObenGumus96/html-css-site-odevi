@@ -1,0 +1,824 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+     display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer" ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh 1fr 5vh; 
+    width: 100%;
+    position: relative;
+    background-color: #76b39d; 
+}
+
+/* header */
+
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: #fdb44b;
+    
+    
+}
+.logo{
+    width: 100px;
+    height: 100px;
+    
+}
+.resim{
+    width: 100%;
+}
+
+.title{
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 45px;
+    margin: 0;
+}
+
+header a{
+    text-decoration: none;
+    color: black;
+}
+
+.buton{
+    display: flex;
+    gap: 10px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: #962071;
+    transition: all 0.5s;
+}
+
+
+.soldier{
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    background-image: url(./img/Grenade.png);
+    right: 0px;
+    bottom: 0px;
+    background-position: 0px;
+    animation: run 2s steps(8) infinite reverse ,linear infinite;
+}
+
+
+@keyframes run{
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: 2048px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .soldier{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .logo{
+        display: none;
+    }
+    .title{
+        font-size: 40px;
+    }
+    
+   
+}
+@media only screen and (max-width: 435px) {
+    .title{
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .title{
+        font-size: 25px;
+    }
+}
+
+/* header */
+
+/* Main */
+
+main{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+    width: 100%;
+    
+}
+
+.foto{
+    width: 35%;
+    height: 600px;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+.foto1{
+    width: 125%;
+    height: 100%;
+    border-radius: 20px;
+    margin-left: 150px;
+}
+
+.thrall{
+    width: 160%;
+    height: 100px;
+    border: 1px solid transparent;
+}
+
+.thrall p {
+    font-weight: 900;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    margin-left: 170px;
+}
+.baslık{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.sagkutu{
+    border: 1px solid transparent;
+    width: 60%;
+    margin-top: auto;
+    margin-left: -350px;
+}
+
+.sagkutu h1{
+    color:#962071 ;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.yazı{
+    width: 50%;
+    height: 200px;
+    border: 1px solid transparent;
+    background-color: #fdb44b;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    margin: auto;
+    margin-left: 90px;
+}
+
+.sagkutu2{
+    border: 1px solid transparent;
+    width: 60%;
+    margin-top: auto;
+    margin-left: 300px;
+    
+}
+
+.yazı2{
+    width: 50%;
+    height: 200px;
+    border: 1px solid transparent;
+    background-color: #fdb44b;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    margin: auto;
+    margin-right: 90px;
+    
+}
+
+.sagkutu2 h1{
+    color:#962071 ;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.paragraf{
+    padding-top: 40px;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.paragrafson{
+    padding-top: 60px;
+    font-weight: 600;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+.paragrafson a{
+    text-decoration: none;
+    color: #962071;
+}
+
+@media only screen and (max-width: 1400px) {
+    main{
+        display: flex;
+        justify-content: space-between;
+    }
+    .foto1{
+        margin: 0;
+        width: 100%;
+    }
+    .yazı{
+        margin: 0;
+    }
+    .yazı2{
+        margin: 0;
+    }
+    .sagkutu{
+        margin-left: 0;
+    }
+    .sagkutu2{
+        margin-left: 0;
+    }
+    .thrall{
+        width: 100%;
+    }
+    .thrall p{
+        margin-left: 0;
+        width: 100%;
+        padding: 0;
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .baslık{
+        margin-top: 110px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .yazı2 .paragraf{
+        font-size: 23px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .foto{
+        display: none;
+    }
+    .baslık{
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .foto{
+        display: none;
+    }
+    .baslık{
+        margin-top: 0;
+    }
+
+    .paragraf , .paragrafson{
+        font-size: 20px;
+    }
+    .yazı2 .paragraf{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+  
+    .sagkutu h1,.sagkutu2 h1{
+        font-size: 20px;
+    }
+
+    .sagkutu , sagkutu2{
+        height: 50px;
+    }
+    .paragraf , .paragrafson{
+        padding-top: 0;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .paragraf , .paragrafson{
+        font-size: 18px;
+    }
+    .yazı2 .paragraf{
+        font-size: 16px;
+    }
+}
+
+
+/* Main */
+
+/* content */
+
+.contentmain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card{
+    width: 325px;
+    height: 350px;
+    background-color: #fdb44b;
+    margin: 10px;
+    border-radius: 15px;
+}
+.card:hover{
+    transform: translateY(-15px);
+    background-color: #962071;
+    transition: transform 0.5s , background-color 0.4s ;
+}
+.card img{
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 15px;
+}
+
+.content{
+    padding: 12px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.content h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.content p{
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contentbtn{
+    width: 100px;
+    height: 30px;
+     display: inline-block; 
+    margin-left: 100px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+.contentbtn:hover{
+    background-color: #fdb44b;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+
+/* content */
+
+/* hakkımda */
+
+.mainhak{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: 90vh;
+}
+.contenthak{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+    
+}
+.hakfoto{
+    width: 40%;
+    height: auto;
+}
+.hakresim{
+    width: 50%;
+    margin-left: 100px;
+    border-radius: 15px;
+}
+
+.haktitle{
+    text-align: center;
+    font-size: 40px;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.hakkutu{
+    width: 50%;
+    height: 200px;
+    margin-top: -100;
+}
+.hakyazı{
+    width: 100%;
+    height: 200px;
+    border: 1px solid transparent;
+    background-color: #fdb44b;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.hakyazı2{
+    width: 100%;
+    height: 200px;
+    border: 1px solid transparent;
+    background-color: #fdb44b;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.hakyazı p{
+    text-align: center;
+    padding-top: 40px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+.hakyazı a{
+    text-decoration: none;
+    color: #962071;
+}
+
+.fight{
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+.shot{
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    background-image: url(./img/Shot_1.png);
+    left: 50px;
+    bottom: 0px;
+    background-position: 0px;
+    animation: run 2s steps(8) infinite reverse , linear infinite;
+}
+
+@keyframes run{
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: 2048px;
+    }
+}
+
+.dead{
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    background-image: url(./img/Dead.png);
+    right: 50px;
+    bottom: 0px;
+    background-position: 0px;
+    animation: run 4s steps(8) infinite reverse ,  linear infinite;
+}
+@keyframes run{
+    0%{
+        background-position: 0px;
+    }
+    100%{
+        background-position: 2048px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 1250px) {
+    .mainhak{
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+    }
+    .contenthak{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -250px;
+        
+        
+    }
+    .haktitle{
+        margin-top: -60px;
+    }
+    .hakfoto{
+        margin-left: 50px;
+        margin-top: 150px;
+    }
+
+    .hakyazı{
+        margin-top: 2;
+        
+    }
+    .hakyazı p{
+        font-size: 20px;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 875px) {
+    .hakfoto{
+        margin-left: 75px;
+    }
+    .hakresim{
+        width: 80%;
+        margin-left:0px ;
+
+    }
+    .hakyazı p{
+        font-size: 15px;
+    }
+    .fight{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .hakresim{
+        width: 80%;
+    }
+    .haktitle{
+        width: 100%;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hakfoto{
+        margin-left: 0px;
+    }
+    
+    .hakresim{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .hakyazı p{
+        font-size: 13px;
+        padding-top: 0;
+    }
+}
+
+/* Hakkımda */
+
+
+/* İletişim */
+
+.mainilet{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 90vh;
+}
+
+.containerilet{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.titleilet{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.iletarea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iletsol{
+    width: 40%;
+
+}
+
+.iletust{
+    border-bottom: 1px solid #962071;
+    padding-bottom: 32px;
+}
+
+.iletcontent{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.iletcontent i {
+    color: #fdb44b;
+    border: 2px solid #962071;
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 8px;
+    margin-right: 16px;
+}
+
+.iletcontent:hover i{
+    background-color: #962071;
+    color: #fdb44b;
+}
+
+.iletcontent a{
+    color: #962071;
+    text-decoration: none;
+}
+
+.iletalt{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 32px;
+}
+
+.iletalt a {
+    color: #fdb44b;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    font-size: 24px;
+    background-color: #962071;
+    border-radius: 50%;
+}
+
+.iletalt a:hover{
+    color: #962071;
+    background-color: #fdb44b;
+}
+
+.iletsag{
+    width: 60%;
+    padding: 48px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    
+}
+.iletsag form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.iletsag form input , textarea , .iletbtn{
+    width: 100%;
+    background-color: #fdb44b;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #962071;
+    margin: 16px 0px;
+    padding: 8px 16px;
+}
+
+.iletbtn{
+    background-color: #fdb44b;
+    color: #962071;
+    cursor: pointer;
+}
+
+.iletbtn:hover{
+    background-color: #962071;
+    color: #fdb44b;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .iletarea {
+        flex-direction: column;
+    }
+
+    .iletsol, .iletsag {
+        width: 100%;
+    }
+
+    .iletsag form {
+        max-width: 100%;
+    }
+}
+
+/* iletişim */
+
+
+/* footer */
+
+footer{
+    background-color:#fdb44b ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+}
+
+.liste{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #962071;
+    transition: all 0.5s;
+}
+
+.ilet{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+
+@media only screen and (max-width: 475px) {
+    footer{
+        display: inline-block;
+    }
+
+    .liste{
+        display: flex;
+        justify-content: center;
+    }
+
+    .ilet{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* footer */
